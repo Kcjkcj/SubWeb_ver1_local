@@ -12,7 +12,8 @@
 백엔드: Java, Spring Boot, Spring Security <br> 
 프론트엔드: HTML, CSS, JavaScript, React  <br> 
 데이터베이스: MySQL <br>
-환경: Tomcat 
+환경: Tomcat <br>
+HTTP 환경 서버 REST API 테스트 : Postman <br>
 
 환경 설정  <br>
 
