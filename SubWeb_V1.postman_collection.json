@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "42eb4f51-4a72-419d-b6eb-bd792edb58cf",
+		"name": "SubWeb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32169806"
+	},
+	"item": [
+		{
+			"name": "subweb",
+			"item": [
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{bcrypt}$2a$10$a86breINBnp2dlEq8ylg5OYTBLGxd2encqOZLub.FsXVH5P7e8nSi",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "example2@naver.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/profile?id=2",
+							"path": [
+								"profile"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "receivedMessage",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "main page",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "board",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "comment",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "myFriends",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountName\": \"kcj1\",\r\n    \"accountPwd\": \"kcj1\",\r\n    \"accountRole\": \"user\",\r\n    \"email\": \"example2@naver.com\"\r\n}\r\n//여기의 속성명은 DB명이 아니라 POJO 클래스의 변수 명으로 해줘야 됨",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/register",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "kcj1",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "example2@naver.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJTdWJXZWIiLCJzdWIiOiJKV1QiLCJpZCI6MywiZW1haWwiOiJhZG1pbiIsImF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTixST0xFX1VTRVIiLCJpYXQiOjE3Mzk3OTE2NTQsImV4cCI6MTczOTgyMTY1NH0.MmSILV3e9k_tv2E6H-w3Br_yNwEDl82coW_voNjtyDNHRRzWHZAFsnkG6N-9rcXcvirffxF1fpfNFsJWL4PGlw",
+								"type": "text"
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"value": "54d29e8f-d897-4de2-8ccc-5ca0978479b5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subcultureId\": 5,\r\n    \"title\" : \"테스트\",\r\n    \"postBody\" : \"테스트\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/post",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postComment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "e7dd9f11-0ce0-4139-bab6-3c58694096ad",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commentBody\": \"댓글 테스트2 postman\",\r\n    \"postId\":4  \r\n}\r\n\r\n//여기의 속성명은 DB명이 아니라 POJO 클래스의 변수 명으로 해줘야 됨",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/board/content",
+							"path": [
+								"board",
+								"content"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postMessage",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "kcj1",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "example2@naver.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "757f08a0-e5dd-44b2-b02d-f27ffb923639",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJTdWJXZWIiLCJzdWIiOiJKV1QiLCJpZCI6MiwiZW1haWwiOiJleGFtcGxlMkBuYXZlci5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc0MTM0NTM3NywiZXhwIjoxNzQxMzc1Mzc3fQ.xOovtBmKfjv7MZ8GRAyt8UvMLpBcj5EXPfTsndq7LkwlQRUkYme1zweiqjSgyGK0PDiHTL36zolNm0om_tnEfA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receiveId\": \"16\",\r\n    \"notice\": \"false\",\r\n    \"request\": \"true\",\r\n    \"messageBody\" : \"test\"\r\n}\r\n\r\n//여기의 속성명은 DB명이 아니라 POJO 클래스의 변수 명으로 해줘야 됨",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/postMessage",
+							"path": [
+								"postMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "friendRequest",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "296f41db-4734-49ab-acbe-7d8af079ab25",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJTdWJXZWIiLCJzdWIiOiJKV1QiLCJpZCI6MiwiZW1haWwiOiJleGFtcGxlMkBuYXZlci5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiIsImlhdCI6MTczOTk2NDY3NiwiZXhwIjoxNzM5OTk0Njc2fQ.8rFO_2nHLY1CSFmr7qrd9bMZxikF4uIZOZsVKTWmhCxi8GihuE1H3VMJggCMJH5zFyV9kbALZtaXv2yr-8VxHw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"approve\":true,\r\n    \"message\" : {\r\n        \"messageId\": 1,\r\n        \"sendId\": 2,\r\n        \"receiveId\": 15,\r\n        \"isNotice\": false,\r\n        \"isRequest\": true,\r\n        \"messageBody\": \"친구 요청\",\r\n        \"createDt\": \"2025년 02월 19일\",\r\n        \"request\": true,\r\n        \"notice\": false\r\n    }\r\n} //메시지 정보\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/profile/request",
+							"path": [
+								"profile",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFriend",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJTdWJXZWIiLCJzdWIiOiJKV1QiLCJpZCI6MTUsImVtYWlsIjoiZXhhbXBsZTNAbmF2ZXIuY29tIiwiYXV0aG9yaXRpZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE3NDA2MzgyMDIsImV4cCI6MTc0MDY2ODIwMn0.YTizMHNsbhMamZOP_NZaTdf0If5KIWIcyyTds1gLsNlpGs_xXcReJ0zVD_9PaxaYpcq5obYY1wASJ8h5J23pQA",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "ef6c484d-07cd-40f8-b014-41950ceb7328",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountId\":15,\r\n    \"accountName\":\"kcj2\",\r\n    \"email\":\"example3@naver.com\",\r\n    \"createDt\":\"2025년 02월 13일\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/profile/myFriends",
+							"path": [
+								"profile",
+								"myFriends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "757f08a0-e5dd-44b2-b02d-f27ffb923639",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJTdWJXZWIiLCJzdWIiOiJKV1QiLCJpZCI6MiwiZW1haWwiOiJleGFtcGxlMkBuYXZlci5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc0MTM0NTM3NywiZXhwIjoxNzQxMzc1Mzc3fQ.xOovtBmKfjv7MZ8GRAyt8UvMLpBcj5EXPfTsndq7LkwlQRUkYme1zweiqjSgyGK0PDiHTL36zolNm0om_tnEfA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nickname",
+									"value": "k",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "/profile/search",
+							"path": [
+								"profile",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.request.url.protocol=\"http\";\r",
+					"pm.request.url.host=\"localhost\";\r",
+					"pm.request.url.port=\"8080\";"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
