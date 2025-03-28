@@ -43,6 +43,9 @@ subculture <br>
 File 필드는 제거 고려 중 <br>
 주요 필드 수정 금지
 
++ 2025-03-28
+  OAuth2 로그인 기능 추가 (Google, Github, Kakao, Naver)
+
 
 
 
