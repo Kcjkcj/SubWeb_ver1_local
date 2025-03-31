@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `subweb`.`subculture` (
   `subculture_id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(100) NOT NULL,
   `genre` VARCHAR(45) NOT NULL,
-  `image_path` VARCHAR(100) NULL DEFAULT NULL,
+  `image_path` VARCHAR(1000) NULL DEFAULT NULL,
   `create_dt` DATE NOT NULL,
   PRIMARY KEY (`subculture_id`),
   UNIQUE INDEX `title_UNIQUE` (`title` ASC) VISIBLE)
