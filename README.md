@@ -46,7 +46,8 @@ File 필드는 제거 고려 중 <br>
 + 2025-03-28
   OAuth2 로그인 기능 추가 (Google, Github, Kakao, Naver)
 
-  https://velog.io/@backnewbie/Perplexity%EC%99%80-%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94-%EB%82%98%EC%9D%98-%EC%9B%B9-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80-%EC%B2%AB-%EB%B2%88%EC%A7%B8-
+##Velog
+https://velog.io/@backnewbie/Perplexity%EC%99%80-%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94-%EB%82%98%EC%9D%98-%EC%9B%B9-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80-%EC%B2%AB-%EB%B2%88%EC%A7%B8-
 
 
 
