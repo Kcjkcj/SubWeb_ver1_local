@@ -18,7 +18,7 @@ HTTP 환경 서버 REST API 테스트 : Postman <br>
 환경 설정  <br>
 
 JAVA 버전 : 21 <br>
-JDK : Anazib Corretto 21.06_7 <br>
+JDK : Amazon Corretto 21.06_7 <br>
 Spring Boot 버전 : 3.3.8 <br>
 JWT 의존성 버전 : 0.12.5 <br>
 Spring Security : 6.3.6 <br>
